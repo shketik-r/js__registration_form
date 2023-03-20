@@ -1,0 +1,44 @@
+.form__box-checkbox {
+  display: flex;
+  & > input[type=radio] {
+    display: none;
+  }
+}
+
+.form__box-checkbox {
+  & > label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 1.125rem;
+    margin-right: 1.187rem; 
+    line-height: 18px;
+    user-select: none;
+    font-size: 0.875rem;
+  }
+
+  & > label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -0.4rem ;
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 0.04rem solid #5A61ED;
+    border-radius: 50%;
+  }
+
+  & > input[type=radio]:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0.22rem;
+    margin-top: -0.13rem ;
+    width: 0.39rem;
+    height: 0.39rem;
+    background: #5A61ED;
+    border-radius: 50%;
+  }
+}

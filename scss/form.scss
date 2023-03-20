@@ -1,0 +1,44 @@
+.form {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.werapper_box {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form__box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 14.65rem;
+  margin-bottom: 1.01rem;
+
+  & > label {
+    line-height: 0.87rem;
+    color: #7c7c7c;
+    margin-bottom: 0.3rem;
+  }
+}
+
+.footer_box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.link{
+  display: flex;
+  font-size: 0.812rem;
+  line-height: 1.07;
+}

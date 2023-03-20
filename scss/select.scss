@@ -1,0 +1,29 @@
+.form__box-dateBirth {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  & > select {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-bottom: 1px solid #F2F2F2;
+    width: 100%;
+    font-family: "Work Sans", sans-serif;
+    line-height: 1rem;
+  }
+
+  & > #selectDay{
+    min-width: 3.5rem;
+   margin-right: 0.42rem;
+  }
+  & > #selectMonth{
+    min-width: 5.68rem;
+    margin-right: 0.42rem;
+  }
+  & > #selectYear{
+    min-width: 4.18rem;
+  }
+}
+
+

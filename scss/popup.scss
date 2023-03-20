@@ -1,0 +1,29 @@
+
+.popup {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrapper_messages {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2.63rem ;
+  
+}
+.popup_title {
+  font-size: 1.375rem;
+  line-height: 1.625rem;
+  letter-spacing: 0.028rem;
+  font-weight: bold;
+  margin-bottom: 0.687rem;
+}
+.popup_message {
+    font-size: 0.875rem;
+    line-height: 1rem;
+}
+.none {
+  display: none;
+} 

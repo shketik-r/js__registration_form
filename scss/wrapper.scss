@@ -1,0 +1,14 @@
+.wrapper {
+    display: flex;
+    max-width: 41.56rem;
+    min-width: 21.66rem;
+    min-height: 30rem;
+    margin: 0 auto;
+  }
+  
+  .wrapper__signup {
+    position: relative;
+    min-width: 100%;
+    display: flex;
+    min-height: 100%;
+  }

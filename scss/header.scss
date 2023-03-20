@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: end;
+  width: 8.575rem;
+  padding-bottom: 1.137rem;
+  background: #5a61ed;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 3.06rem;
+ 
+}
+
+.header__title {
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+  color: #ffffff;
+  line-height: 3.93rem;
+  margin-right: 0.35rem;
+}

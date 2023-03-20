@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Work+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Shketik Ruslan</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="wrapper__signup">
+        <header class="header">
+          <p class="header__title">Sign up</p>
+        </header>
+        <main class="main">
+       
+
+          <form id="form" class="form " action="">
+            <div>
+              <p class="main__title">New user?</p>
+              <p class="main__text">Use the form below to create your account.</p>
+              <div class="werapper_box">
+                <div class="form__box">
+                  <label for="firstName">First Name</label>
+                  <input
+                    class="input"
+                    id="firstName"
+                    type="text"
+                    name="firstName"
+                  />
+                  <p id="error-firstName" class="message-error none"></p>
+                </div>
+  
+                <div class="form__box">
+                  <label for="lastName">Last Name</label>
+                  <input
+                    class="input"
+                    id="lastName"
+                    type="text"
+                    name="lastName"
+                  />
+                  <p id="error-lastName" class="message-error none"></p>
+                </div>
+  
+                <div class="form__box">
+                  <label for="nationality">Nationality</label>
+                  <select
+                    name="nationality"
+                    class="input"
+                    id="nationality"
+                  ></select>
+                </div>
+  
+                <div class="form__box">
+                  <label for="mail">E-mail</label>
+                  <input class="input" id="mail" type="email" name="mail" />
+                  <p id="error-mail" class="message-error none"></p>
+                </div>
+  
+                <div class="form__box">
+                  <label for="dateBirth">Date of Birth</label>
+                  <div class="form__box-dateBirth">
+                    <select name="dateBirth" id="selectDay"></select>
+                    <select name="month" id="selectMonth"></select>
+                    <select name="year" id="selectYear"></select>
+                  </div>
+                </div>
+  
+                <div class="form__box">
+                  <label for="gender">Gender</label>
+                  <div class="form__box-checkbox">
+                    <input
+                      id="radioMale"
+                      type="radio"
+                      name="gender"
+                      value="male"
+                    />
+                    <label for="radioMale">Male</label>
+                    <input
+                      id="radioFemale"
+                      type="radio"
+                      name="gender"
+                      value="female"
+                    />
+                    <label for="radioFemale">Female</label>
+                  </div>
+                </div>
+  
+                <div class="form__box">
+                  <label for="password">Password</label>
+                  <input
+                    class="input"
+                    id="password"
+                    type="password"
+                    name="password"
+                  />
+                  <p  id="error-password"  class="message-error none"></p>
+                </div>
+  
+                <div class="form__box">
+                  <label for="confirmPassword">Confirm Password</label>
+                  <input
+                    class="input"
+                    id="confirmPassword"
+                    type="password"
+                    name="confirmPassword"
+                  />
+                  <p id="error-confirmPassword"  class="message-error none"></p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="footer_box">
+              <div class="link">
+                <p>Have an account?</p> 
+                <a href="#"> Login</a>
+              </div>
+              
+              <button id="submit" type="submit">Complete Signup</button>
+            </div>
+          </form>
+
+          <div class="popup none">
+            <div class="wrapper_messages">
+              <p class="popup_title">Thank You!</p>
+              <p class="popup_message">you registered!</p>
+            </div>
+            <div class="link">
+              <p>Have an account?</p> 
+              <a href="#"> Login</a>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
+</html>
