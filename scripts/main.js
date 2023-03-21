@@ -23,9 +23,10 @@ let selectNationality = document.getElementById("nationality");
 
 let popup = document.querySelector(".popup");
 
-form.addEventListener("submit", async (e) => {
+form.addEventListener("submit",  (e) => {
   e.preventDefault();
   checkInputs();
+  formSubmission()
   if (validator.getResult() === true) {
     formSubmission()
   }
