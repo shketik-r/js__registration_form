@@ -34,22 +34,15 @@ form.addEventListener("submit",  (e) => {
 
  function  formSubmission() {
   let http = new XMLHttpRequest();
- http.open("get", "../db/server-ok.json", true);
+ http.open("get", "./db/server-ok.json", true);
   
  http.send();
   
-  http.onload = async function   () {
-    console.log(' http.send();',  http)
-    let readyState = await http.readyState
-    console.log('readyState', readyState)
-    let status = await http.status
-    console.log('status', status)
-    if (readyState == 4 &&  status == 200) {
-      console.log(' ok',  http.readyState)
+  http.onload = function   () {
+    if (http.readyState == 4 &&  http.status == 200) {
       form.reset();
       showPupupOk();
     } else {
-      console.log(' err',  http.readyState)
       form.reset();
       showPupupError(error);
     }
