@@ -7,7 +7,6 @@ let birht = new Birth();
 
 let form = document.getElementById("form");
 
-
 let lastName = document.getElementById("lastName");
 let firstName = document.getElementById("firstName");
 let mail = document.getElementById("mail");
@@ -26,22 +25,23 @@ let popup = document.querySelector(".popup");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+  checkInputs();
   if (validator.getResult() === true) {
     let http = new XMLHttpRequest();
-  http.open("get", "../db/server-ok.json", true);
-  http.send();
-  http.onload = function () {
-    if (this.readyState === 4 && this.status === 200) {
-      form.reset();
-      showPupupOk();
-    } else {
-      form.reset();
-      showPupupError(error);
-    }
-  };
-    e.submitter.classList.contains("stun") ? e.submitter.classList.remove("stun") : false;
-  } else {
-    checkInputs();
+    http.open("get", "../db/server-ok.json", true);
+    http.send();
+    http.onload = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        form.reset();
+        showPupupOk();
+      } else {
+        form.reset();
+        showPupupError(error);
+      }
+    };
+    e.submitter.classList.contains("stun")
+      ? e.submitter.classList.remove("stun")
+      : false;
   }
 });
 
