@@ -23,31 +23,33 @@ let selectNationality = document.getElementById("nationality");
 
 let popup = document.querySelector(".popup");
 
-form.addEventListener("submit",  (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
   checkInputs();
-  formSubmission()
+  // e.submitter.classList.contains("stun") ? e.submitter.classList.remove("stun") : '';
   if (validator.getResult() === true) {
-    formSubmission()
+    // e.submitter.classList.remove("stun")
+    formSubmission();
+  }else{
+    e.submitter.classList.add("stun")
+    setTimeout(()=>e.submitter.classList.remove("stun"),1000)
   }
 });
 
- function  formSubmission() {
+function formSubmission() {
   let http = new XMLHttpRequest();
- http.open("get", "./db/server-ok.json", true);
-  
- http.send();
-  
-  http.onload = function   () {
-    if (http.readyState == 4 &&  http.status == 200) {
+  http.open("get", "./db/server-ok.json", true);
+  http.send();
+  http.onload = function () {
+    if (http.readyState == 4 && http.status == 200) {
       form.reset();
       showPupupOk();
     } else {
-      form.reset();
       showPupupError(error);
     }
   };
 }
+
 popup.addEventListener("click", () => {
   form.classList.remove("none");
   popup.classList.add("none");

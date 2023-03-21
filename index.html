@@ -18,7 +18,7 @@
           <p class="header__title">Sign up</p>
         </header>
         <main class="main">
-          <form id="form" class="form" action="">
+          <form id="form" class="form" action="#">
             <div>
               <p class="main__title">New user?</p>
               <p class="main__text">
@@ -64,8 +64,8 @@
                 </div>
 
                 <div class="form__box">
-                  <label for="dateBirth">Date of Birth</label>
-                  <div class="form__box-dateBirth">
+                  <label for="wrapp-dateBirth">Date of Birth</label>
+                  <div id="wrapp-dateBirth" class="form__box-dateBirth">
                     <div class="select-day"><select name="dateBirth" id="selectDay"></select></div>
                     <div class="select-month"><select name="month" id="selectMonth"></select></div>
                     <div class="select-year"><select name="year" id="selectYear"></select></div>
@@ -73,8 +73,9 @@
                 </div>
 
                 <div class="form__box">
-                  <label for="gender">Gender</label>
-                  <div class="form__box-checkbox">
+                  <label for="wrapp-gender">Gender</label>
+                  <div id="wrapp-gender" class="form__box-checkbox">
+                    
                     <input
                       id="radioMale"
                       type="radio"
@@ -122,7 +123,7 @@
                 <a href="#"> Login</a>
               </div>
 
-              <button class="stun" id="submit" type="submit">Complete Signup</button>
+              <button  id="submit" type="submit">Complete Signup</button>
             </div>
           </form>
 
