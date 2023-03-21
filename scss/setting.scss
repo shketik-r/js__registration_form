@@ -6,6 +6,12 @@
 input {
   outline: 0;
 }
+select{
+  border: none;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+}
 button {
   padding: 0;
   border: none;

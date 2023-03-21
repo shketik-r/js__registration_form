@@ -7,6 +7,7 @@ let birht = new Birth();
 
 let form = document.getElementById("form");
 
+
 let lastName = document.getElementById("lastName");
 let firstName = document.getElementById("firstName");
 let mail = document.getElementById("mail");
@@ -26,27 +27,26 @@ let popup = document.querySelector(".popup");
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   if (validator.getResult() === true) {
-    let http = new XMLHttpRequest();
-    http.open("get", "../db/server-ok.json", true);
-    http.send();
-    http.onload = function () {
-      if (this.readyState === 4 && this.status === 200) {
-        form.reset();
-        showPupupOk();
-      } else {
-        form.reset();
-        showPupupError(error);
-      }
-    };
+    e.submitter.classList.contains("stun") ? e.submitter.classList.remove("stun") : false;
+    formSubmission();
   } else {
     checkInputs();
-    document.getElementById("submit").classList.add("stun");
-    setTimeout(removeStun,1000)
   }
 });
 
-function removeStun(){
-  document.getElementById("submit").classList.remove("stun");
+function formSubmission() {
+  let http = new XMLHttpRequest();
+  http.open("get", "../db/server-ok.json", true);
+  http.send();
+  http.onload = function () {
+    if (this.readyState === 4 && this.status === 200) {
+      form.reset();
+      showPupupOk();
+    } else {
+      form.reset();
+      showPupupError(error);
+    }
+  };
 }
 popup.addEventListener("click", () => {
   form.classList.remove("none");
@@ -80,11 +80,11 @@ function checkInputs() {
 }
 
 function showError(result, elem) {
+  let messageError = document.getElementById(`error-${elem.id}`);
   if (result === true) {
+    messageError.textContent = "";
     elem.classList.contains("red") ? elem.classList.remove("red") : false;
   } else {
-    let e = elem.id;
-    let messageError = document.getElementById(`error-${e}`);
     elem.classList.add("red");
     messageError.classList.remove("none");
     messageError.textContent = result;

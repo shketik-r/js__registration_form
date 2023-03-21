@@ -1,29 +1,58 @@
+select {
+  border-bottom: 1px solid #f2f2f2;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1rem;
+  width: 100%;
+}
+
+.nationality {
+  width: 100%;
+  position: relative;
+
+  &::after {
+    content: " ";
+    background-image: url("../svg/shape.svg");
+     position: absolute;
+     width: 0.5rem;
+     height: 0.25rem;
+     top: 0.31rem;
+     right: 0;
+  }
+}
+
 .form__box-dateBirth {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  
 
-  & > select {
-    border: none;
+  &>div::after {
+    content: " ";
+   background-image: url("../svg/shape.svg");
+    position: absolute;
     cursor: pointer;
-    outline: none;
-    border-bottom: 1px solid #F2F2F2;
-    width: 100%;
-    font-family: "Work Sans", sans-serif;
-    line-height: 1rem;
-  }
-
-  & > #selectDay{
-    min-width: 3.5rem;
-   margin-right: 0.42rem;
-  }
-  & > #selectMonth{
-    min-width: 5.68rem;
-    margin-right: 0.42rem;
-  }
-  & > #selectYear{
-    min-width: 4.18rem;
+    width: 0.5rem;
+    height: 0.25rem;
+    top: 0.31rem;
+    right: 0;
+    z-index: 0;
   }
 }
 
+.select-day {
+  margin-right: 0.42rem;
+  min-width: 3.5rem;
+  position: relative;
+  
+}
 
+.select-month {
+  margin-right: 0.42rem;
+  min-width: 5.68rem;
+  position: relative;
+}
+
+.select-year {
+  min-width: 4.18rem;
+  position: relative;
+}

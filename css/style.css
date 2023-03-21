@@ -8,6 +8,13 @@ input {
   outline: 0;
 }
 
+select {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+}
+
 button {
   padding: 0;
   border: none;
@@ -97,7 +104,40 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.werapper_box > div {
+  opacity: 0;
+  animation: fade 1s linear forwards;
+}
+.werapper_box > div:nth-of-type(2) {
+  animation-delay: 0.5s;
+}
+.werapper_box > div:nth-of-type(3) {
+  animation-delay: 1s;
+}
+.werapper_box > div:nth-of-type(4) {
+  animation-delay: 1.5s;
+}
+.werapper_box > div:nth-of-type(5) {
+  animation-delay: 2s;
+}
+.werapper_box > div:nth-of-type(6) {
+  animation-delay: 2.5s;
+}
+.werapper_box > div:nth-of-type(7) {
+  animation-delay: 3s;
+}
+.werapper_box > div:nth-of-type(8) {
+  animation-delay: 3.5s;
+}
 
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .form__box {
   display: flex;
   flex-direction: column;
@@ -137,30 +177,59 @@ body {
   font-weight: 400;
 }
 
+select {
+  border-bottom: 1px solid #f2f2f2;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1rem;
+  width: 100%;
+}
+
+.nationality {
+  width: 100%;
+  position: relative;
+}
+.nationality::after {
+  content: " ";
+  background-image: url("../svg/shape.svg");
+  position: absolute;
+  width: 0.5rem;
+  height: 0.25rem;
+  top: 0.31rem;
+  right: 0;
+}
+
 .form__box-dateBirth {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.form__box-dateBirth > select {
-  border: none;
+.form__box-dateBirth > div::after {
+  content: " ";
+  background-image: url("../svg/shape.svg");
+  position: absolute;
   cursor: pointer;
-  outline: none;
-  border-bottom: 1px solid #F2F2F2;
-  width: 100%;
-  font-family: "Work Sans", sans-serif;
-  line-height: 1rem;
+  width: 0.5rem;
+  height: 0.25rem;
+  top: 0.31rem;
+  right: 0;
+  z-index: 0;
 }
-.form__box-dateBirth > #selectDay {
+
+.select-day {
+  margin-right: 0.42rem;
   min-width: 3.5rem;
-  margin-right: 0.42rem;
+  position: relative;
 }
-.form__box-dateBirth > #selectMonth {
+
+.select-month {
+  margin-right: 0.42rem;
   min-width: 5.68rem;
-  margin-right: 0.42rem;
+  position: relative;
 }
-.form__box-dateBirth > #selectYear {
+
+.select-year {
   min-width: 4.18rem;
+  position: relative;
 }
 
 .form__box-checkbox {
@@ -185,22 +254,20 @@ body {
   display: inline-block;
   position: absolute;
   left: 0;
-  top: 50%;
-  margin-top: -0.4rem;
+  top: 0.2rem;
   width: 0.75rem;
   height: 0.75rem;
-  border: 0.04rem solid #5A61ED;
+  border: 0.04rem solid #5a61ed;
   border-radius: 50%;
 }
 .form__box-checkbox > input[type=radio]:checked + label::after {
   content: "";
   position: absolute;
-  top: 50%;
   left: 0.22rem;
-  margin-top: -0.13rem;
+  top: 0.44rem;
   width: 0.39rem;
   height: 0.39rem;
-  background: #5A61ED;
+  background: #5a61ed;
   border-radius: 50%;
 }
 
@@ -217,7 +284,7 @@ body {
   font-family: "PT Sans", sans-serif;
 }
 
-.stun {
+.stun:active {
   animation: shake 0.5s;
 }
 

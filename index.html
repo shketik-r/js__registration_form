@@ -18,12 +18,12 @@
           <p class="header__title">Sign up</p>
         </header>
         <main class="main">
-       
-
-          <form id="form" class="form " action="">
+          <form id="form" class="form" action="">
             <div>
               <p class="main__title">New user?</p>
-              <p class="main__text">Use the form below to create your account.</p>
+              <p class="main__text">
+                Use the form below to create your account.
+              </p>
               <div class="werapper_box">
                 <div class="form__box">
                   <label for="firstName">First Name</label>
@@ -35,7 +35,7 @@
                   />
                   <p id="error-firstName" class="message-error none"></p>
                 </div>
-  
+
                 <div class="form__box">
                   <label for="lastName">Last Name</label>
                   <input
@@ -46,31 +46,32 @@
                   />
                   <p id="error-lastName" class="message-error none"></p>
                 </div>
-  
+
                 <div class="form__box">
                   <label for="nationality">Nationality</label>
-                  <select
-                    name="nationality"
-                    class="input"
-                    id="nationality"
-                  ></select>
+                  <div class="nationality">
+                    <select
+                      name="nationality"
+                      id="nationality"
+                    ></select>
+                  </div>
                 </div>
-  
+
                 <div class="form__box">
                   <label for="mail">E-mail</label>
                   <input class="input" id="mail" type="email" name="mail" />
                   <p id="error-mail" class="message-error none"></p>
                 </div>
-  
+
                 <div class="form__box">
                   <label for="dateBirth">Date of Birth</label>
                   <div class="form__box-dateBirth">
-                    <select name="dateBirth" id="selectDay"></select>
-                    <select name="month" id="selectMonth"></select>
-                    <select name="year" id="selectYear"></select>
+                    <div class="select-day"><select name="dateBirth" id="selectDay"></select></div>
+                    <div class="select-month"><select name="month" id="selectMonth"></select></div>
+                    <div class="select-year"><select name="year" id="selectYear"></select></div>
                   </div>
                 </div>
-  
+
                 <div class="form__box">
                   <label for="gender">Gender</label>
                   <div class="form__box-checkbox">
@@ -90,7 +91,7 @@
                     <label for="radioFemale">Female</label>
                   </div>
                 </div>
-  
+
                 <div class="form__box">
                   <label for="password">Password</label>
                   <input
@@ -99,9 +100,9 @@
                     type="password"
                     name="password"
                   />
-                  <p  id="error-password"  class="message-error none"></p>
+                  <p id="error-password" class="message-error none"></p>
                 </div>
-  
+
                 <div class="form__box">
                   <label for="confirmPassword">Confirm Password</label>
                   <input
@@ -110,19 +111,18 @@
                     type="password"
                     name="confirmPassword"
                   />
-                  <p id="error-confirmPassword"  class="message-error none"></p>
+                  <p id="error-confirmPassword" class="message-error none"></p>
                 </div>
               </div>
             </div>
 
-
             <div class="footer_box">
               <div class="link">
-                <p>Have an account?</p> 
+                <p>Have an account?</p>
                 <a href="#"> Login</a>
               </div>
-              
-              <button id="submit" type="submit">Complete Signup</button>
+
+              <button class="stun" id="submit" type="submit">Complete Signup</button>
             </div>
           </form>
 
@@ -132,7 +132,7 @@
               <p class="popup_message">you registered!</p>
             </div>
             <div class="link">
-              <p>Have an account?</p> 
+              <p>Have an account?</p>
               <a href="#"> Login</a>
             </div>
           </div>
