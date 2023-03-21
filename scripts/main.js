@@ -37,9 +37,11 @@ function formSubmission() {
   http.send();
   http.onload = function () {
     if ( http.readyState == 4 &&  http.status == 200) {
+      console.log(' ok',  http.readyState)
       form.reset();
       showPupupOk();
     } else {
+      console.log(' err',  http.readyState)
       form.reset();
       showPupupError(error);
     }
