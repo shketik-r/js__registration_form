@@ -36,7 +36,7 @@ function formSubmission() {
   http.open("get", "../db/server-ok.json", true);
   http.send();
   http.onload = function () {
-    if (this.readyState == 4 && this.status == 200) {
+    if ( http.readyState == 4 &&  http.status == 200) {
       form.reset();
       showPupupOk();
     } else {
